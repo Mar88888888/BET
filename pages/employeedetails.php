@@ -23,7 +23,7 @@ $employee = mysqli_fetch_assoc($employee_result);
 
 echo "<h2>Інформація про співробітника</h2>";
 
-// Таблиця з інформацією про співробітника
+
 echo "<div class='employee-info'>
         <table>
             <tr>
@@ -41,7 +41,6 @@ echo "<div class='employee-info'>
         </table>
       </div>";
 
-// Запит для отримання матеріальних цінностей
 $issuances_query = "SELECT Issuances.id, Items.name, Issuances.issue_date 
                     FROM Issuances 
                     JOIN Items ON Issuances.item_id = Items.id
