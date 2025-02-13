@@ -37,6 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <a href="employees.php">Співробітники</a>
         <a href="items.php">МЦ</a>
         <a href="issuances.php">Видачі</a>
+        <a href="statistics.php">Статистика</a>
     </div>
     
     <div class="form-container">

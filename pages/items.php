@@ -12,6 +12,7 @@
         <a href="employees.php">Співробітники</a>
         <a href="items.php">МЦ</a>
         <a href="issuances.php">Видачі</a>
+        <a href="statistics.php">Статистика</a>
     </div>
 <?php
 require_once("../connections/MySiteDB.php");

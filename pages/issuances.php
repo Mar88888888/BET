@@ -29,6 +29,7 @@ $result = mysqli_query($connection, $query);
         <a href="employees.php">Співробітники</a>
         <a href="items.php">МЦ</a>
         <a href="issuances.php">Видачі</a>
+        <a href="statistics.php">Статистика</a>
     </div>
     <div class='container'>
         <h2>Видачі матеріальних цінностей</h2>
@@ -54,6 +55,7 @@ $result = mysqli_query($connection, $query);
         </table><br>
         <div class="button-container">
             <button onclick="window.location.href='addIssuance.php'">Додати видачу</button>
+            <button onclick="window.location.href='searchIssuance.php'">Пошук</button>
             <button onclick="window.location.href='deleteIssuance.php'">Видалення видач</button>
         </div>
     </div>
