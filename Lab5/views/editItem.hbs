@@ -1,0 +1,18 @@
+<head>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<h1>Edit Item</h1>
+<form action="/items/{{item._id}}?_method=PUT" method="POST">
+  <label>Name:</label>
+  <input type="text" name="name" value="{{item.name}}" required>
+
+  <label>Weight (kg):</label>
+  <input type="number" name="weight" value="{{item.weight}}" required>
+
+  <label>Material:</label>
+  <input type="text" name="material" value="{{item.material}}" required>
+
+  <button type="submit">Update</button>
+</form>
+<a href="/items">Cancel</a>

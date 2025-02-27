@@ -1,0 +1,17 @@
+<head>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<h1>Edit Employee</h1>
+<form action="/employees/{{employee._id}}?_method=PUT" method="POST">
+  <label>First Name:</label>
+  <input type="text" name="first_name" value="{{employee.first_name}}" required>
+
+  <label>Last Name:</label>
+  <input type="text" name="last_name" value="{{employee.last_name}}" required>
+
+  <label>Room Number:</label>
+  <input type="number" name="room_number" value="{{employee.room_number}}" required>
+
+  <button type="submit">Update</button>
+</form>
+<a href="/employees">Cancel</a>

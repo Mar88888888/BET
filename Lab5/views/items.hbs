@@ -1,0 +1,24 @@
+<h1>Items</h1>
+<a href="/add-item">Add New Item</a>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Weight (kg)</th>
+    <th>Material</th>
+    <th>Actions</th>
+  </tr>
+  {{#each items}}
+  <tr>
+    <td>{{this.name}}</td>
+    <td>{{this.weight}}</td>
+    <td>{{this.material}}</td>
+    <td>
+      <form action="/items/{{this._id}}?_method=DELETE" method="POST" onsubmit="return confirm('Are you sure?');">
+        <a class="edit-btn" href="/edit-item/{{this._id}}">Edit</a>
+        <button type="submit" class="delete-btn">Delete</button>
+      </form>
+
+    </td>
+  </tr>
+  {{/each}}
+</table>

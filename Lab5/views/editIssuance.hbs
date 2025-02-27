@@ -1,0 +1,30 @@
+<head>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<h1>Edit Issuance</h1>
+<form action="/issuances/{{issuance._id}}?_method=PUT" method="POST">
+  <label>Employee:</label>
+  <select name="employee_id" required>
+    {{#each employees}}
+    <option value="{{this._id}}" {{#if (eq this._id ../issuance.employee_id._id)}}selected{{/if}}>
+      {{this.first_name}} {{this.last_name}}
+    </option>
+    {{/each}}
+  </select>
+
+  <label>Item:</label>
+  <select name="item_id" required>
+    {{#each items}}
+    <option value="{{this._id}}" {{#if (eq this._id ../issuance.item_id._id)}}selected{{/if}}>
+      {{this.name}}
+    </option>
+    {{/each}}
+  </select>
+
+  <label>Issue Date:</label>
+  <input type="date" name="issue_date" value="{{formatDate issuance.issue_date}}" required>
+
+  <button type="submit">Update</button>
+</form>
+<a href="/issuances">Cancel</a>
